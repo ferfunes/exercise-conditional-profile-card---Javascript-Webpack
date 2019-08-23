@@ -701,19 +701,37 @@ __webpack_require__.r(__webpack_exports__);
  *  This function is called every time the user changes types or changes any input
  */
 function render(variables = {}) {
-  // here we ask the logical questions to make decitions on how to build the heml
+  // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+
+  let pNombre = "lucy";
+  if (variables.name !== null) pNombre = variables.name;
+
+  let pApellido = "Boilett";
+  if (variables.lastname !== null) pApellido = variables.lastname;
+
+  let cargo = "dev";
+  if (variables.role !== null) cargo = variables.role;
+
+  let ciudad = "City";
+  if (variables.city !== null) ciudad = variables.city;
+
+  let pais = "Country";
+  if (variables.country !== null) pais = variables.country;
+
+  let sMedia = "position";
+  if (variables.socialMediaPosition !== null) sMedia = variables.socialMediaPosition;
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
+          <h1>${pNombre} ${pApellido}</h1>
+          <h2>${cargo}</h2>
+          <h3>${ciudad} ${pais}</h3>
+          <ul class="${sMedia}">
             <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
             <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
@@ -724,7 +742,7 @@ function render(variables = {}) {
 }
 
 /**
- * Ignore this lines below, here is where we do the logic for the dropdowns
+ * Don't change any of the lines below, here is where we do the logic for the dropdowns
  */
 window.onload = function () {
   window.variables = {
