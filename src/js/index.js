@@ -49,6 +49,18 @@ function render(variables = {}) {
   if (variables.socialMediaPosition !== null)
     sMedia = variables.socialMediaPosition;
 
+  let twitterHandler = "twitter";
+  if (variables.twitter !== null) twitterHandler = variables.twitter;
+
+  let githubHandler = "github";
+  if (variables.github !== null) githubHandler = variables.github;
+
+  let linkedinHandler = "linkedin";
+  if (variables.linkedin !== null) linkedinHandler = variables.linkedin;
+
+  let instaHandler = "instagram";
+  if (variables.instagram !== null) instaHandler = variables.instagram;
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -57,10 +69,10 @@ function render(variables = {}) {
           <h2>${cargo}</h2>
           <h3>${ciudad} ${pais}</h3>
           <ul class="${sMedia}">
-            <li><a href="https://twitter.com/djfumes"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/djfumesgithub.com/ferfunes"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/fernando-funez-b98597125/"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/djfumes"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${twitterHandler}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${githubHandler}"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/${linkedinHandler}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${instaHandler}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
