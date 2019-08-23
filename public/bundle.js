@@ -732,10 +732,10 @@ function render(variables = {}) {
           <h2>${cargo}</h2>
           <h3>${ciudad} ${pais}</h3>
           <ul class="${sMedia}">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/djfumes"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/ferfunes"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/fernando-funez-b98597125/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/djfumes"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
