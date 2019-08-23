@@ -706,22 +706,42 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
-  let pNombre = "lucy";
-  if (variables.name !== null) pNombre = variables.name;
+  let pNombre = "";
+  if (variables.name !== null) {
+    pNombre = variables.name;
+  } else {
+    pNombre = "Name";
+  }
 
-  let pApellido = "Boilett";
-  if (variables.lastname !== null) pApellido = variables.lastname;
+  let pApellido = "";
+  if (variables.lastname !== null) {
+    pApellido = variables.lastname;
+  } else {
+    pApellido = "Last Name";
+  }
 
-  let cargo = "dev";
-  if (variables.role !== null) cargo = variables.role;
+  let cargo = "";
+  if (variables.role !== null) {
+    cargo = variables.role;
+  } else {
+    cargo = "Role";
+  }
 
-  let ciudad = "City";
-  if (variables.city !== null) ciudad = variables.city;
+  let ciudad = "";
+  if (variables.city !== null) {
+    ciudad = variables.city;
+  } else {
+    ciudad = "City";
+  }
 
-  let pais = "Country";
-  if (variables.country !== null) pais = variables.country;
+  let pais = "";
+  if (variables.country !== null) {
+    pais = variables.country;
+  } else {
+    pais = "Country";
+  }
 
-  let sMedia = "position";
+  let sMedia = "";
   if (variables.socialMediaPosition !== null) sMedia = variables.socialMediaPosition;
 
   // reset the website body with the new html output
@@ -733,7 +753,7 @@ function render(variables = {}) {
           <h3>${ciudad} ${pais}</h3>
           <ul class="${sMedia}">
             <li><a href="https://twitter.com/djfumes"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/ferfunes"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://github.com/djfumesgithub.com/ferfunes"><i class="fa fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/fernando-funez-b98597125/"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/djfumes"><i class="fa fa-instagram"></i></a></li>
           </ul>
